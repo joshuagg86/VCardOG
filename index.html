@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: "Poppins";
-            background-color: #2e2e2e;
+            background-image: url(bg.jpg);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -121,10 +121,21 @@
             z-index: 2;
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 20px 0;
+            gap: 10px;
+            padding: 10px 0;
         }
-
+        .facebook {
+            transition: transform 0.4s ease-in-out;
+        }
+        .facebook:hover {
+            transform: scale(1.08);
+        }
+        .instagram {
+            transition: transform 0.4s ease-in-out;
+        }
+        .instagram:hover {
+            transform: scale(1.08);
+        }
         .social-icons img {
             width: 40px;
             height: 40px;
@@ -140,6 +151,7 @@
             margin-left: 10px;
             margin-right: 10px;
             margin-bottom: 25px;
+            text-decoration: none;
         }
 
         .feature-item {
@@ -151,12 +163,18 @@
             height: 65px;
             background: linear-gradient(90deg, rgba(113,36,31,1) 27%, rgba(107,36,32,1) 100%);
             border-radius: 15px;
+            text-decoration: none;
+            transition: transform 0.4s ease-in-out;
+        }
+        .feature-item:hover {
+            transform: scale(1.08);
         }
 
         .feature-item img {
             padding-top: 8px;
             width: 30px;
             height: 25px;
+            
         }
 
         .feature-item p {
@@ -212,25 +230,25 @@
                 <p>Direct to Film</p>
             </div>
         </div>
-
         <div class="features">
-            <div class="feature-item">
-                <img src="phone.png" alt="Whatsapp">
+            <a href="tel:+19098372308" class="feature-item">
+                <img src="phone.png" alt="Phone">
                 <p>Phone</p>
-            </div>
-            <div class="feature-item">
+            </a>
+            <a href="mailto:enrique@omegagraphicdesignsca.com" class="feature-item">
                 <img src="mail.png" alt="Email">
                 <p>Email</p>
-            </div>
-            <div class="feature-item">
+            </a>
+            <a href="https://www.yelp.com/biz/omega-graphic-designs-rancho-cucamonga" target="_blank" class="feature-item">
                 <img src="yelp.png" alt="Yelp">
                 <p>Yelp</p>
-            </div>
+            </a>
         </div>
         <div class="social-icons">
-            <img src="fb.png" alt="Facebook">
-            <img src="ig.png" alt="Instagram">
+            <a href="https://www.facebook.com/OMEGAGRAPHICSCHICAGOILLINOIS" class="facebook"><img src="fb.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/omegagraphicsdesigns" class="instagram"><img src="ig.png" alt="Instagram"></a>
         </div>
+
         <!-- Imagen de fondo en la parte inferior -->
         <div class="footer-image-container"></div>
     </div>
