@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarjeta de Presentación - Omega Graphics Designs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Poppins";
             background-color: #2e2e2e;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 90vh;
             margin: 0;
             padding: 20px;
         }
@@ -20,7 +23,7 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
+            max-width: 330px;
             width: 100%;
             text-align: center;
             position: relative;
@@ -31,7 +34,7 @@
         .logo-container {
             position: relative;
             width: 100%;
-            height: 230px; /* Ajusta la altura según sea necesario */
+            height: 230px;
             overflow: hidden;
         }
 
@@ -43,8 +46,8 @@
         }
 
         .logo {
-            width: 170px; /* Ajusta el tamaño según sea necesario */
-            height: 170px;
+            width: 190px;
+            height: 190px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -58,41 +61,68 @@
         .name {
             font-size: 27px;
             font-weight: bold;
-            margin-bottom: 5px;
-            margin-top: 10px;
         }
 
         .title {
             font-size: 22px;
-            color: #555;
-            margin-bottom: 10px;
+            color: #71241f;
+            margin-bottom: 5px;
         }
 
         .services {
+            font-weight: 500;
+            line-height: 10px;
             gap: 15px;
-            font-size: 18px;
+            font-size: 16px;
             color: #333;
             margin-bottom: 10px;
             margin-top: 10px;
-            display: flex; /* Cambio de grid a flexbox */
-            justify-content: space-between; /* Distribuye los elementos a los extremos */
+            display: flex;
+            justify-content: space-between;
         }
 
         .services div:first-child {
-            text-align: right; /* Alinear el primer div a la derecha */
+            text-align: right;
             width: 50%;
         }
 
         .services div:last-child {
-            text-align: left; /* Alinear el segundo div a la izquierda */
+            text-align: left;
             width: 50%;
         }
-                
+        /* Puntos rojos a la derecha en el primer div */
+    .services div:first-child p {
+        text-align: right;
+        position: relative;
+    }
+
+    .services div:first-child p::after {
+        content: "•"; /* Agrega un punto */
+        color: #71241f; /* Color rojo */
+        font-size: 23px; /* Tamaño del punto */
+        margin-left: 4px; /* Espacio entre la palabra y el punto */
+    }
+
+    /* Puntos rojos a la izquierda en el segundo div */
+    .services div:last-child p {
+        text-align: left;
+        position: relative;
+    }
+
+    .services div:last-child p::before {
+        content: "•"; /* Agrega un punto */
+        color: #71241f; /* Color rojo */
+        font-size: 23px; /* Tamaño del punto */
+        margin-right: 4px; /* Espacio entre el punto y la palabra */
+    }
+
         .social-icons {
+            position: relative;
+            z-index: 2;
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 20px;
+            padding: 20px 0;
         }
 
         .social-icons img {
@@ -101,6 +131,7 @@
         }
 
         .features {
+            font-weight: 300;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -108,6 +139,7 @@
             gap: 2px;
             margin-left: 10px;
             margin-right: 10px;
+            margin-bottom: 25px;
         }
 
         .feature-item {
@@ -117,7 +149,7 @@
             align-items: center;
             width: 90px;
             height: 65px;
-            background-color: #71241f;
+            background: linear-gradient(90deg, rgba(113,36,31,1) 27%, rgba(107,36,32,1) 100%);
             border-radius: 15px;
         }
 
@@ -144,6 +176,18 @@
         .social {
             font-size: 20px;
         }
+
+        /* Fondo de la parte inferior */
+        .footer-image-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            background-image: url('fin.png');
+            background-size: cover;
+            background-position: center;
+        }
+
     </style>
 </head>
 <body>
@@ -153,7 +197,6 @@
             <img src="top.png" alt="Imagen de encabezado" class="card-image">
             <div class="logo"></div>
         </div>
-        <hr class="linea-60">
         <div class="name">Enrique Garcia</div>
         <div class="title">Owner</div>
         <hr class="linea-60">
@@ -172,8 +215,8 @@
 
         <div class="features">
             <div class="feature-item">
-                <img src="wa.png" alt="Whatsapp">
-                <p>Whatsapp</p>
+                <img src="phone.png" alt="Whatsapp">
+                <p>Phone</p>
             </div>
             <div class="feature-item">
                 <img src="mail.png" alt="Email">
@@ -184,15 +227,13 @@
                 <p>Yelp</p>
             </div>
         </div>
-
-        <div class="social">
-            <p>¡Síguenos en redes sociales!</p>
-        </div>
-
         <div class="social-icons">
             <img src="fb.png" alt="Facebook">
             <img src="ig.png" alt="Instagram">
         </div>
+
+        <!-- Imagen de fondo en la parte inferior -->
+        <div class="footer-image-container"></div>
     </div>
 </body>
 </html>
