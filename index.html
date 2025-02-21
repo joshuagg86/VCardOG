@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #2e2e2e;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,39 +29,37 @@
 
         /* Contenedor del logo y la imagen superior */
         .logo-container {
-    position: relative;
-    width: 100%;
-    height: 230px; /* Ajusta la altura según sea necesario */
-    overflow: hidden;
-}
+            position: relative;
+            width: 100%;
+            height: 230px; /* Ajusta la altura según sea necesario */
+            overflow: hidden;
+        }
 
-.card-image {
-    width: 100%;
-    height: 70%;
-    display: block;
-    object-fit: cover;
-}
+        .card-image {
+            width: 100%;
+            height: 70%;
+            display: block;
+            object-fit: cover;
+        }
 
-
-
-.logo {
-    width: 170px; /* Ajusta el tamaño según sea necesario */
-    height: 170px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url('logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
+        .logo {
+            width: 170px; /* Ajusta el tamaño según sea necesario */
+            height: 170px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
         .name {
             font-size: 27px;
             font-weight: bold;
             margin-bottom: 5px;
+            margin-top: 10px;
         }
 
         .title {
@@ -71,18 +69,25 @@
         }
 
         .services {
+            gap: 20px;
             font-size: 18px;
             color: #333;
-            margin-bottom: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: flex; /* Cambio de grid a flexbox */
+            justify-content: space-between; /* Distribuye los elementos a los extremos */
         }
 
-        .services div {
-            text-align: center;
+        .services div:first-child {
+            text-align: right; /* Alinear el primer div a la derecha */
+            width: 50%;
         }
 
+        .services div:last-child {
+            text-align: left; /* Alinear el segundo div a la izquierda */
+            width: 50%;
+        }
+                
         .social-icons {
             display: flex;
             justify-content: center;
@@ -99,8 +104,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 10px;
             gap: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .feature-item {
@@ -109,13 +116,13 @@
             flex-direction: column;
             align-items: center;
             width: 90px;
-            height: 70px;
+            height: 65px;
             background-color: #71241f;
             border-radius: 15px;
         }
 
         .feature-item img {
-            padding-top: 10px;
+            padding-top: 8px;
             width: 30px;
             height: 25px;
         }
@@ -123,6 +130,7 @@
         .feature-item p {
             font-size: 14px;
             color: #FFF;
+            margin-top: 5px;
         }
 
         .linea-60 {
@@ -133,11 +141,12 @@
             background-color: #71241f;
         }
 
+        .social {
+            font-size: 20px;
+        }
+
         /* Media Queries */
         @media (max-width: 600px) {
-            .card {
-                padding: 15px;
-            }
 
             .name { font-size: 24px; }
             .title { font-size: 20px; }
@@ -149,7 +158,7 @@
         }
 
         @media (max-width: 400px) {
-            .card { max-width: 90%; }
+            .card { max-width: 100%; }
             .name { font-size: 18px; }
             .title { font-size: 14px; }
             .services { font-size: 12px; }
@@ -167,10 +176,10 @@
             <img src="top.png" alt="Imagen de encabezado" class="card-image">
             <div class="logo"></div>
         </div>
+        <hr class="linea-60">
         <div class="name">Enrique Garcia</div>
         <div class="title">Owner</div>
         <hr class="linea-60">
-
         <div class="services">
             <div>
                 <p>Signs</p>
